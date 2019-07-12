@@ -1,16 +1,19 @@
-# shopping_cart
+# Flutter Shopping Cart
 
-A new Flutter shopping cart application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+#Screenshot
+<div>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Checkout.png"  height="500" width="260"/>
+ <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Edit%20Profile.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Filter%20Bottom%20Sheet.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Grid%20Item%20List.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Home.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Invite%20Friends.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Login.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Notification.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Product%20Details.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Profile.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Search.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Share%20App.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Signup.png"  height="500" width="260"/>
+  <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/cart.png"  height="500" width="260"/>
+ </div>
