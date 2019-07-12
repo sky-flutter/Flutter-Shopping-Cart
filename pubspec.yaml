@@ -1,0 +1,108 @@
+name: shopping_cart
+description: A new Flutter shopping cart application.
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^0.1.2
+  flutter_rating_bar: ^1.1.0
+  flutter_money_formatter: ^0.4.5
+  provider: ^3.0.0+1
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - images/ic_logo.png
+    - images/slider_img.webp
+    - images/shoes_1.png
+    - images/shoes_2.png
+    - images/shoes_3.png
+    - images/shoes_4.png
+    - images/shoes_5.png
+    - images/shoes_6.png
+    - images/ic_thank_you.png
+    - images/shoes_7.png
+    - images/ic_user_profile.png
+    - images/details_shoes_image.webp
+    - images/ic_about_us.png
+    - images/ic_invite_friends.png
+    - images/ic_notification.png
+    - images/ic_payment.png
+    - images/ic_refer_friends_bg.jpg
+    - images/ic_logout.png
+    - images/ic_reward_credits.png
+    - images/ic_promo_code.png
+    - images/ic_settings.png
+    - images/ic_qr_code.svg
+    - images/ic_qr_code.png
+    - images/ic_support.png
+    - images/ic_chair.png
+    - images/ic_chair1.png
+    - images/ic_chair2.png
+    - images/ic_chair4.png
+    - images/ic_table.png
+    - images/ic_table1.png
+    - images/ic_search.png
+    - images/ic_shopping_cart.png
+
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/assets-and-images/#resolution-aware.
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/assets-and-images/#from-packages
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  fonts:
+    - family: Helvetica
+      fonts:
+        - asset: fonts/helvetica/HelveticaNeue_Light.ttf
+          weight: 200
+        - asset: fonts/helvetica/HelveticaNeue_Regular.ttf
+          weight: 400
+        - asset: fonts/helvetica/HelveticaNeue_Medium.ttf
+          weight: 500
+        - asset: fonts/helvetica/HelveticaNeue-Bold.ttf
+          weight: 700
+        - asset: fonts/helvetica/HelveticaNeue_BlackCond.ttf
+          weight: 900
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/custom-fonts/#from-packages

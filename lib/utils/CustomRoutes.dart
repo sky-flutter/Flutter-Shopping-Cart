@@ -1,0 +1,3 @@
+class CustomRoutes {
+  //static const
+}
