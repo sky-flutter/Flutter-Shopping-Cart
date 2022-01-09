@@ -1,5 +1,7 @@
 # Flutter Shopping Cart
 
+Migrate to the android embedding V2
+
 # Screenshot
 <div>
   <img src="https://github.com/sky-flutter/Flutter-Shopping-Cart/blob/master/screenshot/Login.png"  height="500" width="260"/>
