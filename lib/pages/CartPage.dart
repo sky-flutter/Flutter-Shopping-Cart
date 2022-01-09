@@ -13,18 +13,12 @@ class _CartPageState extends State<CartPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
       resizeToAvoidBottomInset: false,
       backgroundColor: Colors.grey.shade100,
       body: Builder(
         builder: (context) {
           return ListView(
-            children: <Widget>[
-              createHeader(),
-              createSubTitle(),
-              createCartList(),
-              footer(context)
-            ],
+            children: <Widget>[createHeader(), createSubTitle(), createCartList(), footer(context)],
           );
         },
       ),
@@ -44,16 +38,14 @@ class _CartPageState extends State<CartPage> {
                 margin: EdgeInsets.only(left: 30),
                 child: Text(
                   "Total",
-                  style: CustomTextStyle.textFormFieldMedium
-                      .copyWith(color: Colors.grey, fontSize: 12),
+                  style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.grey, fontSize: 12),
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(right: 30),
                 child: Text(
                   "\$299.00",
-                  style: CustomTextStyle.textFormFieldBlack.copyWith(
-                      color: Colors.greenAccent.shade700, fontSize: 14),
+                  style: CustomTextStyle.textFormFieldBlack.copyWith(color: Colors.greenAccent.shade700, fontSize: 14),
                 ),
               ),
             ],
@@ -61,17 +53,14 @@ class _CartPageState extends State<CartPage> {
           Utils.getSizedBox(height: 8),
           RaisedButton(
             onPressed: () {
-              Navigator.push(context,
-                  new MaterialPageRoute(builder: (context) => CheckOutPage()));
+              Navigator.push(context, new MaterialPageRoute(builder: (context) => CheckOutPage()));
             },
             color: Colors.green,
             padding: EdgeInsets.only(top: 12, left: 60, right: 60, bottom: 12),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(24))),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(24))),
             child: Text(
               "Checkout",
-              style: CustomTextStyle.textFormFieldSemiBold
-                  .copyWith(color: Colors.white),
+              style: CustomTextStyle.textFormFieldSemiBold.copyWith(color: Colors.white),
             ),
           ),
           Utils.getSizedBox(height: 8),
@@ -86,8 +75,7 @@ class _CartPageState extends State<CartPage> {
       alignment: Alignment.topLeft,
       child: Text(
         "SHOPPING CART",
-        style: CustomTextStyle.textFormFieldBold
-            .copyWith(fontSize: 16, color: Colors.black),
+        style: CustomTextStyle.textFormFieldBold.copyWith(fontSize: 16, color: Colors.black),
       ),
       margin: EdgeInsets.only(left: 12, top: 12),
     );
@@ -98,8 +86,7 @@ class _CartPageState extends State<CartPage> {
       alignment: Alignment.topLeft,
       child: Text(
         "Total(3) Items",
-        style: CustomTextStyle.textFormFieldBold
-            .copyWith(fontSize: 12, color: Colors.grey),
+        style: CustomTextStyle.textFormFieldBold.copyWith(fontSize: 12, color: Colors.grey),
       ),
       margin: EdgeInsets.only(left: 12, top: 4),
     );
@@ -121,9 +108,7 @@ class _CartPageState extends State<CartPage> {
       children: <Widget>[
         Container(
           margin: EdgeInsets.only(left: 16, right: 16, top: 16),
-          decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(Radius.circular(16))),
+          decoration: BoxDecoration(color: Colors.white, borderRadius: BorderRadius.all(Radius.circular(16))),
           child: Row(
             children: <Widget>[
               Container(
@@ -133,8 +118,7 @@ class _CartPageState extends State<CartPage> {
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.all(Radius.circular(14)),
                     color: Colors.blue.shade200,
-                    image: DecorationImage(
-                        image: AssetImage("images/shoes_1.png"))),
+                    image: DecorationImage(image: AssetImage("images/shoes_1.png"))),
               ),
               Expanded(
                 child: Container(
@@ -149,15 +133,13 @@ class _CartPageState extends State<CartPage> {
                           "NIKE XTM Basketball Shoeas",
                           maxLines: 2,
                           softWrap: true,
-                          style: CustomTextStyle.textFormFieldSemiBold
-                              .copyWith(fontSize: 14),
+                          style: CustomTextStyle.textFormFieldSemiBold.copyWith(fontSize: 14),
                         ),
                       ),
                       Utils.getSizedBox(height: 6),
                       Text(
                         "Green M",
-                        style: CustomTextStyle.textFormFieldRegular
-                            .copyWith(color: Colors.grey, fontSize: 14),
+                        style: CustomTextStyle.textFormFieldRegular.copyWith(color: Colors.grey, fontSize: 14),
                       ),
                       Container(
                         child: Row(
@@ -165,8 +147,7 @@ class _CartPageState extends State<CartPage> {
                           children: <Widget>[
                             Text(
                               "\$299.00",
-                              style: CustomTextStyle.textFormFieldBlack
-                                  .copyWith(color: Colors.green),
+                              style: CustomTextStyle.textFormFieldBlack.copyWith(color: Colors.green),
                             ),
                             Padding(
                               padding: const EdgeInsets.all(8.0),
@@ -181,12 +162,10 @@ class _CartPageState extends State<CartPage> {
                                   ),
                                   Container(
                                     color: Colors.grey.shade200,
-                                    padding: const EdgeInsets.only(
-                                        bottom: 2, right: 12, left: 12),
+                                    padding: const EdgeInsets.only(bottom: 2, right: 12, left: 12),
                                     child: Text(
                                       "1",
-                                      style:
-                                          CustomTextStyle.textFormFieldSemiBold,
+                                      style: CustomTextStyle.textFormFieldSemiBold,
                                     ),
                                   ),
                                   Icon(
@@ -220,9 +199,7 @@ class _CartPageState extends State<CartPage> {
               color: Colors.white,
               size: 20,
             ),
-            decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-                color: Colors.green),
+            decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4)), color: Colors.green),
           ),
         )
       ],

@@ -11,7 +11,7 @@ class _OrderPlacePageState extends State<OrderPlacePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        resizeToAvoidBottomPadding: false,
+        resizeToAvoidBottomInset: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
           elevation: 0,
@@ -51,8 +51,7 @@ class _OrderPlacePageState extends State<OrderPlacePage> {
                             TextSpan(
                               text:
                                   "\n\nThank you for your purchase. Our company values each and every customer. We strive to provide state-of-the-art devices that respond to our clients’ individual needs. If you have any questions or feedback, please don’t hesitate to reach out.",
-                              style: CustomTextStyle.textFormFieldMedium
-                                  .copyWith(fontSize: 12, color: Colors.grey),
+                              style: CustomTextStyle.textFormFieldMedium.copyWith(fontSize: 12, color: Colors.grey),
                             )
                           ])),
                       SizedBox(
@@ -62,13 +61,10 @@ class _OrderPlacePageState extends State<OrderPlacePage> {
                         onPressed: () {},
                         child: Text(
                           "View Order",
-                          style: CustomTextStyle.textFormFieldMedium
-                              .copyWith(color: Colors.white),
+                          style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.white),
                         ),
                         color: Colors.pink,
-                        shape: RoundedRectangleBorder(
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(24))),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(24))),
                       )
                     ],
                   ),

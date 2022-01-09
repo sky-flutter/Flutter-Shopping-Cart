@@ -13,7 +13,7 @@ class _SignUpState extends State<SignUp> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: Container(
         width: double.infinity,
         child: Column(
@@ -37,16 +37,11 @@ class _SignUpState extends State<SignUp> {
                             contentPadding: EdgeInsets.fromLTRB(16, 16, 16, 12),
                             border: CustomBorder.enabledBorder,
                             labelText: "Name",
-                            hasFloatingPlaceholder: true,
                             focusedBorder: CustomBorder.focusBorder,
                             errorBorder: CustomBorder.errorBorder,
                             enabledBorder: CustomBorder.enabledBorder,
                             labelStyle: CustomTextStyle.textFormFieldRegular
-                                .copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).textScaleFactor *
-                                            16,
-                                    color: Colors.black)),
+                                .copyWith(fontSize: MediaQuery.of(context).textScaleFactor * 16, color: Colors.black)),
                         keyboardType: TextInputType.text),
                     Utils.getSizedBox(height: 20),
                     TextFormField(
@@ -54,16 +49,11 @@ class _SignUpState extends State<SignUp> {
                             contentPadding: EdgeInsets.fromLTRB(16, 16, 16, 12),
                             border: CustomBorder.enabledBorder,
                             labelText: "Mobile Number",
-                            hasFloatingPlaceholder: true,
                             focusedBorder: CustomBorder.focusBorder,
                             errorBorder: CustomBorder.errorBorder,
                             enabledBorder: CustomBorder.enabledBorder,
                             labelStyle: CustomTextStyle.textFormFieldRegular
-                                .copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).textScaleFactor *
-                                            16,
-                                    color: Colors.black)),
+                                .copyWith(fontSize: MediaQuery.of(context).textScaleFactor * 16, color: Colors.black)),
                         keyboardType: TextInputType.number),
                     Utils.getSizedBox(height: 20),
                     TextFormField(
@@ -71,16 +61,11 @@ class _SignUpState extends State<SignUp> {
                             contentPadding: EdgeInsets.fromLTRB(16, 16, 16, 12),
                             border: CustomBorder.enabledBorder,
                             labelText: "Email",
-                            hasFloatingPlaceholder: true,
                             focusedBorder: CustomBorder.focusBorder,
                             errorBorder: CustomBorder.errorBorder,
                             enabledBorder: CustomBorder.enabledBorder,
                             labelStyle: CustomTextStyle.textFormFieldRegular
-                                .copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).textScaleFactor *
-                                            16,
-                                    color: Colors.black)),
+                                .copyWith(fontSize: MediaQuery.of(context).textScaleFactor * 16, color: Colors.black)),
                         keyboardType: TextInputType.emailAddress),
                     Utils.getSizedBox(height: 20),
                     TextFormField(
@@ -88,16 +73,11 @@ class _SignUpState extends State<SignUp> {
                           contentPadding: EdgeInsets.fromLTRB(16, 16, 16, 12),
                           border: CustomBorder.enabledBorder,
                           labelText: "Password",
-                          hasFloatingPlaceholder: true,
                           focusedBorder: CustomBorder.focusBorder,
                           errorBorder: CustomBorder.errorBorder,
                           enabledBorder: CustomBorder.enabledBorder,
                           labelStyle: CustomTextStyle.textFormFieldRegular
-                              .copyWith(
-                                  fontSize:
-                                      MediaQuery.of(context).textScaleFactor *
-                                          16,
-                                  color: Colors.black)),
+                              .copyWith(fontSize: MediaQuery.of(context).textScaleFactor * 16, color: Colors.black)),
                       obscureText: true,
                     ),
                     Utils.getSizedBox(height: 20),
@@ -107,13 +87,11 @@ class _SignUpState extends State<SignUp> {
                         onPressed: () {},
                         child: Text(
                           "SIGNUP",
-                          style: CustomTextStyle.textFormFieldRegular
-                              .copyWith(color: Colors.white, fontSize: 14),
+                          style: CustomTextStyle.textFormFieldRegular.copyWith(color: Colors.white, fontSize: 14),
                         ),
                         color: Colors.blue,
                         textColor: Colors.white,
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.all(Radius.circular(4))),
+                        shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
                       ),
                     ),
                   ],

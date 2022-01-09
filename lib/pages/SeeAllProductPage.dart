@@ -34,12 +34,10 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
     double width = MediaQuery.of(context).size.width / 2;
     return Scaffold(
       key: _scaffoldKey,
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        bottom: PreferredSize(
-            child: filterSortListOption(),
-            preferredSize: Size(double.infinity, 44)),
+        bottom: PreferredSize(child: filterSortListOption(), preferredSize: Size(double.infinity, 44)),
         title: Text(
           "GROUP BY",
           style: CustomTextStyle.textFormFieldBold.copyWith(fontSize: 16),
@@ -72,8 +70,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
           return Container(
             color: Colors.grey.shade100,
             child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2, childAspectRatio: 0.68),
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2, childAspectRatio: 0.68),
               itemBuilder: (context, position) {
                 return gridItem(context, position);
               },
@@ -132,8 +129,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
           Utils.getSizedBox(width: 4),
           Text(
             title,
-            style: CustomTextStyle.textFormFieldBold
-                .copyWith(color: Colors.black.withOpacity(0.8), fontSize: 12),
+            style: CustomTextStyle.textFormFieldBold.copyWith(color: Colors.black.withOpacity(0.8), fontSize: 12),
           )
         ],
       ),
@@ -161,13 +157,11 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
                 alignment: Alignment.center,
                 width: 24,
                 height: 24,
-                decoration:
-                    BoxDecoration(shape: BoxShape.circle, color: Colors.indigo),
+                decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.indigo),
                 child: Text(
                   "30%",
                   textAlign: TextAlign.center,
-                  style: CustomTextStyle.textFormFieldBold
-                      .copyWith(color: Colors.white, fontSize: 10),
+                  style: CustomTextStyle.textFormFieldBold.copyWith(color: Colors.white, fontSize: 10),
                 ),
               ),
             ),
@@ -201,16 +195,13 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
             children: <Widget>[
               Text(
                 "\$50.00",
-                style: CustomTextStyle.textFormFieldBold
-                    .copyWith(color: Colors.indigo.shade700, fontSize: 14),
+                style: CustomTextStyle.textFormFieldBold.copyWith(color: Colors.indigo.shade700, fontSize: 14),
               ),
               Utils.getSizedBox(width: 8),
               Text(
                 "\$80.00",
-                style: CustomTextStyle.textFormFieldBold.copyWith(
-                    color: Colors.grey,
-                    fontSize: 14,
-                    decoration: TextDecoration.lineThrough),
+                style: CustomTextStyle.textFormFieldBold
+                    .copyWith(color: Colors.grey, fontSize: 14, decoration: TextDecoration.lineThrough),
               ),
             ],
           ),
@@ -230,8 +221,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
               Utils.getSizedBox(width: 4),
               Text(
                 "4.5",
-                style: CustomTextStyle.textFormFieldMedium
-                    .copyWith(color: Colors.black, fontSize: 14),
+                style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.black, fontSize: 14),
               ),
             ],
           )
@@ -255,8 +245,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
         return filterBottomSheetContent();
       },
       shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(16), topLeft: Radius.circular(16))),
+          borderRadius: BorderRadius.only(topRight: Radius.circular(16), topLeft: Radius.circular(16))),
     );
   }
 
@@ -266,8 +255,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(color: Colors.grey.shade200, width: 1),
-        borderRadius: BorderRadius.only(
-            topRight: Radius.circular(16), topLeft: Radius.circular(16)),
+        borderRadius: BorderRadius.only(topRight: Radius.circular(16), topLeft: Radius.circular(16)),
       ),
       width: double.infinity,
       child: Column(
@@ -283,20 +271,17 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
               ),
               Text(
                 "Filter",
-                style: CustomTextStyle.textFormFieldMedium.copyWith(
-                    color: Colors.black.withOpacity(0.8), fontSize: 16),
+                style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.black.withOpacity(0.8), fontSize: 16),
               ),
               Text(
                 "Reset",
-                style: CustomTextStyle.textFormFieldBold
-                    .copyWith(color: Colors.indigo, fontSize: 16),
+                style: CustomTextStyle.textFormFieldBold.copyWith(color: Colors.indigo, fontSize: 16),
               ),
             ],
           ),
           Utils.getSizedBox(height: 28),
           Container(
-            child:
-                Text("Price Range", style: CustomTextStyle.textFormFieldMedium),
+            child: Text("Price Range", style: CustomTextStyle.textFormFieldMedium),
             margin: EdgeInsets.only(left: 4),
           ),
           Utils.getSizedBox(height: 14),
@@ -308,11 +293,9 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       hintText: "Minimum",
-                      hintStyle: CustomTextStyle.textFormFieldMedium
-                          .copyWith(color: Colors.grey.shade800),
+                      hintStyle: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.grey.shade800),
                       focusedBorder: border,
-                      contentPadding: EdgeInsets.only(
-                          right: 8, left: 8, top: 12, bottom: 12),
+                      contentPadding: EdgeInsets.only(right: 8, left: 8, top: 12, bottom: 12),
                       border: border,
                       enabledBorder: border,
                     ),
@@ -334,11 +317,9 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
                   child: TextFormField(
                     decoration: InputDecoration(
                       hintText: "Maximum",
-                      hintStyle: CustomTextStyle.textFormFieldMedium
-                          .copyWith(color: Colors.grey.shade800),
+                      hintStyle: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.grey.shade800),
                       focusedBorder: border,
-                      contentPadding: EdgeInsets.only(
-                          right: 8, left: 8, top: 12, bottom: 12),
+                      contentPadding: EdgeInsets.only(right: 8, left: 8, top: 12, bottom: 12),
                       border: border,
                       enabledBorder: border,
                     ),
@@ -350,9 +331,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
           ),
           Utils.getSizedBox(height: 16),
           Container(
-            child: Text("Item Filter",
-                style:
-                    CustomTextStyle.textFormFieldMedium.copyWith(fontSize: 16)),
+            child: Text("Item Filter", style: CustomTextStyle.textFormFieldMedium.copyWith(fontSize: 16)),
             margin: EdgeInsets.only(left: 4),
           ),
           Utils.getSizedBox(height: 8),
@@ -368,8 +347,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
                       children: <Widget>[
                         Text(
                           "Discount",
-                          style: CustomTextStyle.textFormFieldRegular
-                              .copyWith(fontSize: 14, color: Colors.grey),
+                          style: CustomTextStyle.textFormFieldRegular.copyWith(fontSize: 14, color: Colors.grey),
                         ),
                         Icon(
                           Icons.check,
@@ -392,8 +370,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
           ),
           Utils.getSizedBox(height: 16),
           Container(
-            child:
-                Text("Item Color", style: CustomTextStyle.textFormFieldMedium),
+            child: Text("Item Color", style: CustomTextStyle.textFormFieldMedium),
             margin: EdgeInsets.only(left: 4),
           ),
           Utils.getSizedBox(height: 8),
@@ -407,8 +384,7 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
                   margin: EdgeInsets.only(top: 4, bottom: 4, left: 4),
                   width: 24,
                   height: 24,
-                  decoration: BoxDecoration(
-                      shape: BoxShape.circle, color: listItemColor[position]),
+                  decoration: BoxDecoration(shape: BoxShape.circle, color: listItemColor[position]),
                 );
               },
               itemCount: listItemColor.length,
@@ -420,12 +396,10 @@ class _SeeAllProductPageState extends State<SeeAllProductPage> {
             width: double.infinity,
             child: RaisedButton(
               onPressed: () {},
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.circular(4))),
+              shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
               child: Text(
                 "Apply Filter",
-                style: CustomTextStyle.textFormFieldMedium
-                    .copyWith(color: Colors.white),
+                style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.white),
               ),
               color: Colors.indigo,
             ),

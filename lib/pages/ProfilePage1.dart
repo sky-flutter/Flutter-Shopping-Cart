@@ -46,7 +46,7 @@ class _ProfilePage1State extends State<ProfilePage1> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.grey.shade200,
-      resizeToAvoidBottomPadding: true,
+      resizeToAvoidBottomInset: true,
       body: Builder(builder: (context) {
         return Container(
           child: Stack(

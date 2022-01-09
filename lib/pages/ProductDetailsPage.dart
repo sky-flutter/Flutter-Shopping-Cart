@@ -13,8 +13,7 @@ class ProductDetailsPage extends StatefulWidget {
   _ProductDetailsPageState createState() => _ProductDetailsPageState(heroTag);
 }
 
-class _ProductDetailsPageState extends State<ProductDetailsPage>
-    with TickerProviderStateMixin<ProductDetailsPage> {
+class _ProductDetailsPageState extends State<ProductDetailsPage> with TickerProviderStateMixin<ProductDetailsPage> {
   List<Color> listColor = new List();
   List<String> listSize = new List();
   int selectedColor = -1;
@@ -47,7 +46,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
     var halfOfScreen = MediaQuery.of(context).size.height / 1.5;
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: Builder(builder: (context) {
         return Container(
           height: double.infinity,
@@ -94,8 +93,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
                           Container(
                             height: 4,
                             width: 4,
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle, color: Colors.red),
+                            decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.red),
                           ),
                           Container(
                             height: 28,
@@ -107,15 +105,11 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
                               ),
                               alignment: Alignment.center,
                               onPressed: () {
-                                Navigator.of(context).push(
-                                    new MaterialPageRoute(
-                                        builder: (context) => CartPage()));
+                                Navigator.of(context).push(new MaterialPageRoute(builder: (context) => CartPage()));
                               },
                               iconSize: 14,
                             ),
-                            decoration: BoxDecoration(
-                                shape: BoxShape.circle,
-                                color: Colors.grey.shade400),
+                            decoration: BoxDecoration(shape: BoxShape.circle, color: Colors.grey.shade400),
                           ),
                         ],
                       ),
@@ -147,8 +141,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
                 margin: EdgeInsets.only(left: 8),
                 child: Text(
                   "NIKE XTM Basketball Shoes",
-                  style: CustomTextStyle.textFormFieldSemiBold
-                      .copyWith(color: Colors.black),
+                  style: CustomTextStyle.textFormFieldSemiBold.copyWith(color: Colors.black),
                 ),
               ),
               IconButton(icon: Icon(Icons.close), onPressed: () {})
@@ -160,8 +153,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
             child: Text(
               "Colour",
               textAlign: TextAlign.start,
-              style: CustomTextStyle.textFormFieldBold
-                  .copyWith(color: Colors.black.withOpacity(0.8), fontSize: 12),
+              style: CustomTextStyle.textFormFieldBold.copyWith(color: Colors.black.withOpacity(0.8), fontSize: 12),
             ),
           ),
           Utils.getSizedBox(height: 8),
@@ -181,8 +173,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
             margin: EdgeInsets.only(left: 8),
             child: Text(
               "Size",
-              style: CustomTextStyle.textFormFieldMedium
-                  .copyWith(color: Colors.black.withOpacity(0.8), fontSize: 12),
+              style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.black.withOpacity(0.8), fontSize: 12),
             ),
           ),
           Utils.getSizedBox(height: 8),
@@ -204,16 +195,14 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
                 margin: EdgeInsets.only(left: 8),
                 child: Text(
                   "Total",
-                  style: CustomTextStyle.textFormFieldMedium
-                      .copyWith(color: Colors.grey, fontSize: 12),
+                  style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.grey, fontSize: 12),
                 ),
               ),
               Container(
                 margin: EdgeInsets.only(right: 8),
                 child: Text(
                   "\$299.00",
-                  style: CustomTextStyle.textFormFieldBlack.copyWith(
-                      color: Colors.greenAccent.shade700, fontSize: 14),
+                  style: CustomTextStyle.textFormFieldBlack.copyWith(color: Colors.greenAccent.shade700, fontSize: 14),
                 ),
               ),
             ],
@@ -223,12 +212,10 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
             onPressed: () {},
             color: Colors.green,
             padding: EdgeInsets.only(top: 12, left: 60, right: 60, bottom: 12),
-            shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.all(Radius.circular(24))),
+            shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(24))),
             child: Text(
               "Add To Cart",
-              style: CustomTextStyle.textFormFieldSemiBold
-                  .copyWith(color: Colors.white),
+              style: CustomTextStyle.textFormFieldSemiBold.copyWith(color: Colors.white),
             ),
           )
         ],
@@ -236,8 +223,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
       decoration: BoxDecoration(
           shape: BoxShape.rectangle,
           color: Colors.white,
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(30), topRight: Radius.circular(30))),
+          borderRadius: BorderRadius.only(topLeft: Radius.circular(30), topRight: Radius.circular(30))),
     );
   }
 
@@ -249,15 +235,12 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
       padding: EdgeInsets.only(top: 8),
       child: Text(
         listSize[index],
-        style: CustomTextStyle.textFormFieldSemiBold
-            .copyWith(fontSize: 12, color: Colors.black.withOpacity(0.8)),
+        style: CustomTextStyle.textFormFieldSemiBold.copyWith(fontSize: 12, color: Colors.black.withOpacity(0.8)),
         textAlign: TextAlign.center,
       ),
       decoration: BoxDecoration(
           color: Colors.white,
-          border: Border.all(
-              color: selectedSize == index ? Colors.blue : Colors.grey,
-              width: 1),
+          border: Border.all(color: selectedSize == index ? Colors.blue : Colors.grey, width: 1),
           shape: BoxShape.circle),
     );
   }
@@ -270,8 +253,7 @@ class _ProductDetailsPageState extends State<ProductDetailsPage>
         height: 24,
         decoration: BoxDecoration(
             color: listColor[index],
-            border: Border.all(
-                color: Colors.grey, width: selectedColor == index ? 2 : 0),
+            border: Border.all(color: Colors.grey, width: selectedColor == index ? 2 : 0),
             shape: BoxShape.circle),
       ),
       onTap: () {

@@ -17,8 +17,7 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   navigatePage() {
-    Navigator.of(context)
-        .pushReplacement(new MaterialPageRoute(builder: (context) => Login()));
+    Navigator.of(context).pushReplacement(new MaterialPageRoute(builder: (context) => Login()));
   }
 
   splashMove() {
@@ -34,7 +33,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: Container(
           color: Colors.white,
           child: Center(

@@ -17,7 +17,7 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       body: Builder(builder: (context) {
         return Container(
           width: double.infinity,
@@ -42,16 +42,11 @@ class _LoginState extends State<Login> {
                             contentPadding: EdgeInsets.fromLTRB(16, 16, 16, 12),
                             border: CustomBorder.enabledBorder,
                             labelText: "Mobile No. or Email",
-                            hasFloatingPlaceholder: true,
                             focusedBorder: CustomBorder.focusBorder,
                             errorBorder: CustomBorder.errorBorder,
                             enabledBorder: CustomBorder.enabledBorder,
                             labelStyle: CustomTextStyle.textFormFieldMedium
-                                .copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).textScaleFactor *
-                                            16,
-                                    color: Colors.black)),
+                                .copyWith(fontSize: MediaQuery.of(context).textScaleFactor * 16, color: Colors.black)),
                       ),
                       Utils.getSizedBox(height: 20),
                       TextFormField(
@@ -59,16 +54,11 @@ class _LoginState extends State<Login> {
                             contentPadding: EdgeInsets.fromLTRB(16, 16, 16, 12),
                             border: CustomBorder.enabledBorder,
                             labelText: "Password",
-                            hasFloatingPlaceholder: true,
                             focusedBorder: CustomBorder.focusBorder,
                             errorBorder: CustomBorder.errorBorder,
                             enabledBorder: CustomBorder.enabledBorder,
                             labelStyle: CustomTextStyle.textFormFieldMedium
-                                .copyWith(
-                                    fontSize:
-                                        MediaQuery.of(context).textScaleFactor *
-                                            16,
-                                    color: Colors.black)),
+                                .copyWith(fontSize: MediaQuery.of(context).textScaleFactor * 16, color: Colors.black)),
                         obscureText: true,
                       ),
                       Utils.getSizedBox(height: 20),
@@ -76,21 +66,15 @@ class _LoginState extends State<Login> {
                         width: double.infinity,
                         child: RaisedButton(
                           onPressed: () {
-                            Navigator.pushReplacement(
-                                context,
-                                new MaterialPageRoute(
-                                    builder: (context) => Home()));
+                            Navigator.pushReplacement(context, new MaterialPageRoute(builder: (context) => Home()));
                           },
                           child: Text(
                             "LOGIN",
-                            style: CustomTextStyle.textFormFieldRegular
-                                .copyWith(color: Colors.white, fontSize: 14),
+                            style: CustomTextStyle.textFormFieldRegular.copyWith(color: Colors.white, fontSize: 14),
                           ),
                           color: Colors.blue,
                           textColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(4))),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
                         ),
                       ),
                       Utils.getSizedBox(height: 10),
@@ -99,8 +83,7 @@ class _LoginState extends State<Login> {
                         child: GestureDetector(
                           child: Text(
                             "Forget Password?",
-                            style: CustomTextStyle.textFormFieldBold
-                                .copyWith(color: Colors.blue, fontSize: 14),
+                            style: CustomTextStyle.textFormFieldBold.copyWith(color: Colors.blue, fontSize: 14),
                           ),
                         ),
                       ),
@@ -117,8 +100,7 @@ class _LoginState extends State<Login> {
                           ),
                           Text(
                             "Or",
-                            style: CustomTextStyle.textFormFieldMedium
-                                .copyWith(fontSize: 14),
+                            style: CustomTextStyle.textFormFieldMedium.copyWith(fontSize: 14),
                           ),
                           Expanded(
                             child: Container(
@@ -137,14 +119,11 @@ class _LoginState extends State<Login> {
                           onPressed: () {},
                           child: Text(
                             "FACEBOOK LOGIN",
-                            style: CustomTextStyle.textFormFieldMedium
-                                .copyWith(color: Colors.white, fontSize: 14),
+                            style: CustomTextStyle.textFormFieldMedium.copyWith(color: Colors.white, fontSize: 14),
                           ),
                           color: CustomColors.COLOR_FB,
                           textColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(4))),
+                          shape: RoundedRectangleBorder(borderRadius: BorderRadius.all(Radius.circular(4))),
                         ),
                       ),
                       Utils.getSizedBox(height: 10),
@@ -153,19 +132,16 @@ class _LoginState extends State<Login> {
                         children: <Widget>[
                           Text(
                             "Don't have an account?",
-                            style: CustomTextStyle.textFormFieldMedium
-                                .copyWith(fontSize: 14),
+                            style: CustomTextStyle.textFormFieldMedium.copyWith(fontSize: 14),
                           ),
                           Utils.getSizedBox(width: 4),
                           GestureDetector(
                             child: Text(
                               "Sign Up",
-                              style: CustomTextStyle.textFormFieldBold
-                                  .copyWith(fontSize: 14, color: Colors.blue),
+                              style: CustomTextStyle.textFormFieldBold.copyWith(fontSize: 14, color: Colors.blue),
                             ),
                             onTap: () {
-                              Navigator.of(context).push(new MaterialPageRoute(
-                                  builder: (context) => SignUp()));
+                              Navigator.of(context).push(new MaterialPageRoute(builder: (context) => SignUp()));
                             },
                           ),
                         ],
